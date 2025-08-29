@@ -27,15 +27,39 @@ int main(void)
             printf("%ld annee = %ld mois\n",year,year * 12);
             break;
             case 2 :
+            if((year % 4 == 0 && year % 100 != 0) || ( year % 400 == 0))
+            {
+            printf("cette annee est bisextile\n");
+            printf("%ld annee = %ld jours",year,year*366);
+            }
+            else
             printf("%ld annee = %ld jours",year,year*365);
             break;
             case 3 :
+            if((year % 4 == 0 && year % 100 != 0) || ( year % 400 == 0))
+            {
+            printf("cette annee est bisextile\n");
+            printf("%ld annee = %ld heures",year,year*365*24+24);
+            }
+            else
             printf("%ld annee = %ld heures",year,year*365*24);
             break;
             case 4 :
+            if((year % 4 == 0 && year % 100 != 0) || ( year % 400 == 0))
+            {
+            printf("cette annee est bisextile\n");
+            printf("%ld annee = %ld minutes",year,year*365*24*60+1440);
+            }
+            else
             printf("%ld annee = %ld minutes",year,year*365*24*60);
             break;
             case 5 :
+            if((year % 4 == 0 && year % 100 != 0) || ( year % 400 == 0))
+            {
+            printf("cette annee est bisextile\n");
+            printf("%ld annee = %ld secondes",year,year*365*24*60*60+86400);
+            }
+            else
             printf("%ld annee = %ld secondes",year,year*365*24*60*60);
             break;
             case 6 :

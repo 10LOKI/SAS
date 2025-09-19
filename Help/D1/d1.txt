@@ -1,0 +1,42 @@
+--------> GCC signifie GNU Compiler Collection (Collection de Compilateurs GNU).
+À l’origine, GCC signifiait GNU C Compiler, mais il a évolué pour prendre en charge plusieurs langages (C, C++, Objective-C, Fortran, Ada, etc.).
+C’est un compilateur libre et open-source, développé par le projet GNU.
+
+
+--------> GNU signifie GNU’s Not Unix (GNU n’est pas Unix).
+C’est un jeu de mots récursif ! 
+GNU est un projet de système d’exploitation libre, lancé par Richard Stallman en 1983.
+L’objectif était de créer un système compatible avec Unix, mais entièrement libre.
+Aujourd’hui, GNU est souvent utilisé avec le noyau Linux (d’où le terme GNU/Linux).
+
+--------> Le "problème" est souvent lié à sa strictesse ou à la complexité de ses messages d’erreur.
+
+--------> GCC excelle pour détecter les erreurs grâce à ses options comme -Wall et -Wextra, qui analysent le code rigoureusement et suggèrent des corrections.
+
+--------> C est laconique car il a été conçu dans les années 1970 pour être efficace et proche du langage machine, avec une syntaxe minimaliste pour réduire la charge de saisie et favoriser la performance. Les symboles comme { et int instead of begin and integer sont hérités de ses influences (comme le langage B) et répondent à des contraintes techniques de l’époque (taille mémoire limitée, vitesse de compilation). Cette concision est aujourd’hui considérée comme une force par les programmeurs expérimentés, car elle rend le code plus dense et expressif une fois maîtrisée.
+
+--------> Oui, c'est essentiellement la même chose.
+return 0 dans main() indique une fin normale au système d'exploitation.
+exit(0) fait la même chose, mais peut être utilisé n'importe où dans le programme pour terminer immédiatement.
+Dans main(), return 0 et exit(0) sont équivalents, mais return est plus idiomatique en C moderne.
+
+--------> Q 07 : Depuis le standard C99, si main() atteint la fin sans return, le compilateur ajoute automatiquement un return 0 (indiquant une exécution réussie).
+Avant C99, le comportement était indéfini.
+Cela ne s’applique qu’à main() (pas aux autres fonctions).
+Mais il reste recommandé d’écrire explicitement return 0 pour la clarté du code.
+
+--------> Q 08 : Le compilateur supprime entièrement les commentaires lors de la phase de prétraitement.
+Ils sont remplacés par un seul espace blanc dans le flux de code traité pour éviter de fusionner accidentellement des tokens.
+Ainsi, int/*comment*/x; devient int x; et non intx;.
+
+--------> Q 09 : Pour détecter un commentaire non terminé :
+GCC affichera une erreur comme error: unterminated comment.
+Utilisez l’option -Wall pour des avertissements détaillés.
+Les éditeurs de code modernes (VS Code, Vim, etc.) colorent souvent les commentaires de manière incorrecte s’ils ne sont pas fermés.
+Un commentaire non terminé peut entraîner des erreurs de compilation inexplicables plus loin dans le code.
+
+--------> Q 10 : Non, en C, les commentaires ne peuvent pas être imbriqués. Le /* à l’intérieur d’un commentaire est ignoré et ne crée pas un nouveau commentaire. Cela provoque une erreur si le commentaire n’est pas correctement fermé.
+
+--------> Q 11 : Le nom float vient de l’anglais "floating point" (virgule flottante). Il désigne un nombre réel stocké en mémoire sous une forme scientifique (mantisse et exposant), permettant de représenter des valeurs très grandes ou très petites.
+
+--------> Q 12 : Le f final dans une constante flottante (ex: 3.14f) indique au compilateur que la constante est de type float (simple précision). Sans le f, la constante est traitée comme un double (double précision), ce qui peut entraîner des conversions implicites et une perte de performance.
